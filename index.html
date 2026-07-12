@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AxionOX</title>
+    <style>
+        /* ── Reset & Base ── */
+        *, *::before, *::all: unset; *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* ── Header ── */
+        .header {
+            text-align: center;
+            padding: 48px 24px 40px;
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: #fff;
+            border-radius: 0 0 32px 32px;
+            margin-bottom: 48px;
+        }
+        .header .app-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.18);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 999px;
+            padding: 6px 20px;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .header .subtitle {
+            font-size: 15px;
+            opacity: 0.85;
+        }
+        .header .updated {
+            margin-top: 20px;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* ── Card ── */
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 6px 24px rgba(0,0,0,0.04);
+            padding: 48px 48px 40px;
+            margin-bottom: 32px;
+        }
+        @media (max-width: 640px) {
+            .card { padding: 32px 24px; }
+        }
+
+        /* ── Typography ── */
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a73e8;
+            margin: 0 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e8f0fe;
+        }
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #222;
+            margin: 28px 0 12px;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+        ul, ol {
+            margin: 0 0 16px 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        a:hover { text-decoration: underline; }
+
+        /* ── Highlight Box ── */
+        .highlight-box {
+            background: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            border-radius: 0 12px 12px 0;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .highlight-box p { color: #1a3a6e; margin-bottom: 0; }
+
+        /* ── Table ── */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: 15px;
+        }
+        .data-table thead th {
+            background: #f0f4fa;
+            color: #1a73e8;
+            font-weight: 600;
+            text-align: left;
+            padding: 14px 16px;
+            border-bottom: 2px solid #d0dbe8;
+        }
+        .data-table tbody td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #eef2f7;
+            color: #444;
+        }
+        .data-table tbody tr:hover { background: #f8faff; }
+
+        /* ── Contact Card ── */
+        .contact-card {
+            background: linear-gradient(135deg, #e8f0fe 0%, #f0e6ff 100%);
+            border-radius: 16px;
+            padding: 36px 40px;
+            text-align: center;
+            margin-top: 16px;
+        }
+        .contact-card h3 { margin-top: 0; color: #1a73e8; }
+        .contact-card .email-link {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a73e8;
+            background: #fff;
+            padding: 10px 28px;
+            border-radius: 999px;
+            box-shadow: 0 2px 8px rgba(26,115,232,0.15);
+            transition: transform .15s, box-shadow .15s;
+        }
+        .contact-card .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(26,115,232,0.25);
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: #888;
+            font-size: 13px;
+        }
+        .footer a { color: #888; }
+
+        /* ── Section Nav (top) ── */
+        .toc {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 8px;
+        }
+        .toc a {
+            display: inline-block;
+            background: #eef3fb;
+            color: #1a73e8;
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background .15s;
+        }
+        .toc a:hover { background: #d6e4f7; text-decoration: none; }
+
+        /* ── Divider ── */
+        hr.divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d0dbe8, transparent);
+            margin: 36px 0;
+        }
+
+        /* ── Print ── */
+        @media print {
+            body { background: #fff; }
+            .header { border-radius: 0; }
+            .card { box-shadow: none; border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<div class="header">
+    <div class="app-badge">Privacy Policy</div>
+    <h1>AxionOX</h1>
+    <p class="subtitle">Your privacy matters. All your data stays on your device.</p>
+    <p class="updated">Last Updated: January 15, 2025</p>
+</div>
+
+<div class="container">
+
+    <!-- ==================== TABLE OF CONTENTS ==================== -->
+    <div class="card">
+        <h2>Table of Contents</h2>
+        <nav class="toc">
+            <a href="#overview">Overview</a>
+            <a href="#information">Information We Collect</a>
+            <a href="#use">How We Use Information</a>
+            <a href="#sharing">Information Sharing</a>
+            <a href="#security">Data Security</a>
+            <a href="#rights">Your Rights</a>
+            <a href="#retention">Data Retention</a>
+            <a href="#children">Children's Privacy</a>
+            <a href="#changes">Policy Changes</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </div>
+
+    <!-- ==================== 1. OVERVIEW ==================== -->
+    <div class="card" id="overview">
+        <h2>1. Overview</h2>
+        <div class="highlight-box">
+            <p><strong>AxionOX</strong> ("we," "our," or "us") is designed with privacy as its core principle. This Privacy Policy explains how your information is handled within our fully offline medication management application. Crucially, <strong>AxionOX does not require an internet connection and does not transmit any of your personal data to our servers or any third parties.</strong></p>
+        </div>
+        <p>This Policy applies to all users of the AxionOX mobile application (the "App"). By using the App, you acknowledge that you understand and agree to the local data handling practices described herein.</p>
+    </div>
+
+    <!-- ==================== 2. INFORMATION WE COLLECT ==================== -->
+    <div class="card" id="information">
+        <h2>2. Information We Collect</h2>
+        <p>AxionOX operates entirely offline. We do not collect, store, or transmit your personal information to external servers. All data resides solely on your device.</p>
+
+        <h3>2.1 Data Stored Locally on Your Device</h3>
+        <p>To provide medication tracking functionality, the App stores the following information directly on your device using local database storage:</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>Category</th><th>Examples</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Medication Data</strong></td>
+                    <td>Drug names, dosages, frequencies, schedules</td>
+                    <td>Core medication reminder functionality</td>
+                </tr>
+                <tr>
+                    <td><strong>Dose Logs</strong></td>
+                    <td>Records of taken/missed doses, timestamps</td>
+                    <td>Tracking adherence history</td>
+                </tr>
+                <tr>
+                    <td><strong>App Settings</strong></td>
+                    <td>Reminder preferences, display options</td>
+                    <td>Personalizing your experience</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2.2 Information We Do NOT Collect</h3>
+        <ul>
+            <li><strong>No Account Required:</strong> There is no registration process, so we never collect your name, email, or phone number.</li>
+            <li><strong>No Usage Analytics:</strong> We do not track how you use the App or your navigation patterns.</li>
+            <li><strong>No Location Data:</strong> We do not request or access your location information.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== 3. HOW WE USE INFORMATION ==================== -->
+    <div class="card" id="use">
+        <h2>3. How We Use Your Information</h2>
+        <p>Since all data remains on your device, "use" refers strictly to local processing:</p>
+        <ul>
+            <li><strong>Local Functionality:</strong> To generate reminders, calculate schedules, and display your medication history.</li>
+            <li><strong>Device Notifications:</strong> To trigger local push notifications for your scheduled doses.</li>
+            <li><strong>Data Persistence:</strong> To save your entries so they are available the next time you open the App.</li>
+        </ul>
+        <p><strong>Note:</strong> None of this information ever leaves your device.</p>
+    </div>
+
+    <!-- ==================== 4. INFORMATION SHARING ==================== -->
+    <div class="card" id="sharing">
+        <h2>4. Information Sharing and Disclosure</h2>
+        <div class="highlight-box">
+            <p><strong>We do not share your data because we do not have access to it.</strong> Since AxionOX operates offline and does not utilize cloud servers, there is no data transmitted to us or any third-party analytics/services.</p>
+        </div>
+        <p>In the rare event of a business transfer (e.g., merger or acquisition), we would update this policy accordingly. However, your local data remains unaffected unless you choose to transfer it.</p>
+    </div>
+
+    <!-- ==================== 5. LOCAL STORAGE & TRACKING ==================== -->
+    <div class="card">
+        <h2>5. Local Storage & Tracking Technologies</h2>
+        <p>AxionOX uses standard local storage mechanisms provided by your mobile operating system (such as SQLite databases or UserDefaults) to save your data on your device.</p>
+        <ul>
+            <li><strong>No Cookies:</strong> We do not use web cookies.</li>
+            <li><strong>No Third-Party SDKs:</strong> We do not integrate third-party advertising or analytics SDKs that track you across other apps or websites.</li>
+            <li><strong>No Network Calls:</strong> The App does not initiate any network connections.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== 6. DATA SECURITY ==================== -->
+    <div class="card" id="security">
+        <h2>6. Data Security</h2>
+        <p>Your data security relies primarily on the security features of your own device (passcodes, biometrics, encryption). We enhance privacy through:</p>
+        <ul>
+            <li><strong>Offline Architecture:</strong> By design, your data is never exposed to internet-based threats or server breaches.</li>
+            <li><strong>No Cloud Sync:</strong> Eliminates risks associated with cloud storage vulnerabilities.</li>
+            <li><strong>Minimal Permissions:</strong> We only request permissions essential for local notifications (if required by OS).</li>
+        </ul>
+        <p>We recommend securing your device with a strong passcode and keeping your OS updated to protect your local data.</p>
+    </div>
+
+    <!-- ==================== 7. YOUR RIGHTS ==================== -->
+    <div class="card" id="rights">
+        <h2>7. Your Privacy Rights</h2>
+        <p>You have full control over your data at all times:</p>
+        <ul>
+            <li><strong>Access & Correction:</strong> Access and modify your data directly within the App.</li>
+            <li><strong>Deletion:</strong> Delete individual records within the App, or uninstall the App to remove all associated data from your device.</li>
+            <li><strong>Portability:</strong> If export features are available, you may export your data in standard formats.</li>
+        </ul>
+        <p>For any questions regarding your data handling, contact us at <a href="mailto:axionoxm5wi@gmail.com">axionoxm5wi@gmail.com</a>.</p>
+    </div>
+
+    <!-- ==================== 8. DATA RETENTION ==================== -->
+    <div class="card" id="retention">
+        <h2>8. Data Retention</h2>
+        <p>We retain your information only on your device until you decide to delete it.</p>
+        <ul>
+            <li><strong>Active Use:</strong> Data persists locally while the App is installed.</li>
+            <li><strong>Uninstallation:</strong> Deleting the App typically removes all locally stored data, subject to your device's OS behavior.</li>
+            <li><strong>Backups:</strong> If you use device backup services (e.g., iCloud, Google Drive), data may be included in those backups according to your backup settings.</li>
+        </ul>
+    </div>
+
+    <!-- ==================== 9. CHILDREN'S PRIVACY ==================== -->
+    <div class="card" id="children">
+        <h2>9. Children's Privacy</h2>
+        <p>The App is safe for use by individuals of all ages, including children under 13, specifically because it does not collect personal information online. If you are a parent or guardian, you control the device and the data stored on it. We do not knowingly collect any data from children online.</p>
+    </div>
+
+    <!-- ==================== 10. CHANGES TO THIS POLICY ==================== -->
+    <div class="card" id="changes">
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy to reflect changes in our practices or legal requirements. Updates will be posted within the App or on our website. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <!-- ==================== 11. CONTACT US ==================== -->
+    <div class="card" id="contact">
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or AxionOX's privacy practices, please contact us:</p>
+        <div class="contact-card">
+            <h3>Privacy Team</h3>
+            <p>We typically respond within 72 hours.</p>
+            <a href="mailto:axionoxm5wi@gmail.com" class="email-link">axionoxm5wi@gmail.com</a>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ==================== FOOTER ==================== -->
+    <div class="footer">
+        <p>&copy; 2025 AxionOX. All rights reserved.</p>
+        <p>This Privacy Policy applies to the AxionOX mobile application.</p>
+    </div>
+
+</div><!-- /container -->
+
+</body>
+</html>
